@@ -1,16 +1,11 @@
 function solution(denum1, num1, denum2, num2) {
     const denum = (denum1 * num2) + (denum2 * num1);
     const num = num1 * num2;
-    let smaller;
+    const gcd = findGCD(denum, num);
     
-    denum > num ? 
-        smaller = num :
-        smaller = denum;
-    
-    while(true) {
-        if (denum % smaller === 0 && num % smaller === 0)
-            return [denum / smaller, num / smaller]
-        
-        smaller -= 1;
-    }
+    return [denum / gcd, num / gcd];
+}
+
+function findGCD(num1, num2) {
+    return num1 % num2 ? findGCD(num2, num1 % num2) : num2;
 }
