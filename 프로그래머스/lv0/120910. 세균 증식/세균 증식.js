@@ -1,9 +1,11 @@
 function solution(n, t) {
-    let answer = n;
+//     let answer = n;
     
-    for (let i = 0; i < t; i++) {
-        answer *= 2;
-    }
+//     for (let i = 0; i < t; i++) {
+//         answer *= 2;
+//     }
     
-    return answer;
+//     return answer;
+    
+    return n * (2 ** (t))
 }
