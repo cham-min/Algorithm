@@ -1,6 +1,6 @@
 function solution(my_string, num1, num2) {
-    const result = [...my_string]
-    result.splice(num1, 1, my_string[num2])
-    result.splice(num2, 1, my_string[num1])
-    return result.join("")
+    const strArr = my_string.split('');
+    [strArr[num1], strArr[num2]] = [strArr[num2], strArr[num1]];
+    
+    return strArr.join('');
 }
